@@ -3,9 +3,9 @@ from dataclasses import dataclass
 class activity_info:
     activity: str
     location:str
-    schedule: str
+    schedule: schedule
     slots: int
-    price:str
+    price: price
     contact: str
 class schedule:
     Sunday: str
@@ -15,6 +15,20 @@ class schedule:
     Thursday: str
     Friday: str
     Saturday: str
+class price:
+    adults: str
+    minors: str
+    special: str
+def activity_price(activity:str) -> price:
+    if activity == activities[0]:
+        return price("Admission for adults: $28", "Admission for minors: $25", "")
+    elif activity == activities[1]:
+        return price("Admission for adults: $9", "Admission for minors: $7", """Seniors admission: $8.00 \n 
+                     Free from December 1 to March 15""")
+    elif activity == activities[2]:
+        return price("3 years+ admissoin: $14.50", "1-2 years admission: $4.25", "")
+    elif activity == activities[3]:
+        return price("Admission for adults: $18", "Admission for minors: $7", "")
 activities = ["Axxiom Escape Rooms Newark", "Brandywine Zoo", "Delaware Museum of Nature & Science",
               "Delaware Art Museum"]
 activityInfo = [activity_info("Axxiom Escape Rooms Newark", "280 E Main St, DE 19711",), 
