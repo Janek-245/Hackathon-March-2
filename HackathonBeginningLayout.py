@@ -4,9 +4,9 @@ class activity_info:
     activity: str
     location:str
     schedule: schedule
-    slots: int
     price: price
-    contact: str
+    contact: contact
+    other: str
 class schedule:
     Sunday: str
     Monday: str
@@ -20,9 +20,10 @@ class contact:
     email: str
     website: str
 class price:
-    adults: str
-    minors: str
-    special: str
+    adults: float
+    children: float
+    students: float
+    elderly: float
 def activity_price(activity:str) -> price:
     if activity == activities[0]:
         return price("Admission for adults: $28", "Admission for minors: $25", "")
