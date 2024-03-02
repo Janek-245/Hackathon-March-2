@@ -31,10 +31,10 @@ def activity_price(activity:str) -> price:
         return price("Admission for adults: $18", "Admission for minors: $7", "")
 activities = ["Axxiom Escape Rooms Newark", "Brandywine Zoo", "Delaware Museum of Nature & Science",
               "Delaware Art Museum"]
-activityInfo = [activity_info("Axxiom Escape Rooms Newark", "280 E Main St, DE 19711",), 
-                activity_info("Brandywine Zoo"),
-                activity_info("Delaware Museum of Nature & Science"),
-                activity_info("Delaware Art Museum")]
+activityInfo = [activity_info("Axxiom Escape Rooms Newark", "280 E Main St, DE 19711", activity_price(activities[0])), 
+                activity_info("Brandywine Zoo", "1001 N Park Dr, Wilmington, DE 19802", activity_price(activities[1])),
+                activity_info("Delaware Museum of Nature & Science", "4840 Kennett Pike, Wilmington, DE 19807", activity_price(activities[2])),
+                activity_info("Delaware Art Museum", "2301 Kentmere Pkwy, Wilmington, DE 19806", activity_price[3])]
 def execute(command: str):
     print('For usable commans enter "HELP"')
     command = input("What would you like to know?")
